@@ -7,7 +7,7 @@ export default function Header() {
         <h1>Lumen Archive</h1>
         <nav>
           <a href="">Collection</a>
-          <a href="">Materials</a>
+          <a href="#materials">Materials</a>
           <a href="">About</a>
         </nav>
 

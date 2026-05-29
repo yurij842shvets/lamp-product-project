@@ -11,7 +11,7 @@ export default function MainTitleSection() {
 
           <h1 className="font-bold text-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[120px] leading-[0.9] tracking-tight">
             Aura
-            <span className="block text-yellow-500">—1</span>
+            <span className="block text-[#A48A70] ">—1</span>
           </h1>
 
           <p className="text-base md:text-lg text-gray-500 leading-relaxed max-w-sm">
