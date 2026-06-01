@@ -1,4 +1,9 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@theme {
+  --font-playfair: "Playfair Display", serif;
+}
 
 :root {
   --bg: #fff;
@@ -15,7 +20,6 @@
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
-  font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
   color-scheme: light dark;
   color: var(--text);
@@ -49,7 +53,7 @@
     filter: invert(1) brightness(2);
   }
 }
-
-p, h1, h2, h3 {
-  margin: 8px;
+body {
+  background-color: #F9F8F5;
 }
+

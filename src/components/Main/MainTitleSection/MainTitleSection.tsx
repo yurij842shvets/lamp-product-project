@@ -9,9 +9,9 @@ export default function MainTitleSection() {
             Introducing
           </p>
 
-          <h1 className="font-bold text-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[120px] leading-[0.9] tracking-tight">
+          <h1 className="font-bold text-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[120px] leading-[0.9] tracking-tight font-playfair text-5xl">
             Aura
-            <span className="block text-[#A48A70] ">—1</span>
+            <span className="block text-[#A48A70] font-playfair">—1</span>
           </h1>
 
           <p className="text-base md:text-lg text-gray-500 leading-relaxed max-w-sm">

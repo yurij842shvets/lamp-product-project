@@ -33,7 +33,7 @@ export default function MainMaterialsSection() {
           onPointerCancel={onPointerCancel}
         >
           {materialsData.map((card) => (
-            <div className="min-w-[500px] m-4">
+            <div className="min-w-[500px] m-4" key={card.title}>
               <img
                 src={card.image}
                 alt={card.title}
