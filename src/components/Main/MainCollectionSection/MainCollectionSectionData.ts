@@ -1,4 +1,8 @@
-import type { ProductVariants, ProductColors } from "./MainCollectionSectionData.types";
+import type {
+  ProductVariants,
+  ProductColors,
+  ProductParameters,
+} from "./MainCollectionSectionData.types";
 
 export const productsVariantsData: ProductVariants[] = [
   {
@@ -40,4 +44,13 @@ export const productsColorsData: ProductColors[] = [
     label: "Chrome",
     className: "bg-gray-300",
   },
+];
+
+export const productsParametersData: ProductParameters[] = [
+  { label: "Dimensions", value: "48 × 22 cm" },
+  { label: "Light output", value: "2400 lm" },
+  { label: "Color temp", value: "2700K" },
+  { label: "Material", value: "Aluminum + Glass" },
+  { label: "Weight", value: "1.8 kg" },
+  { label: "Cord length", value: "2.5 m" },
 ];

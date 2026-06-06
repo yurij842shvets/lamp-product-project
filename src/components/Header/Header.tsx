@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <>
-      <section className="flex items-center justify-around">
+      <section className="flex items-center justify-around" id="returns">
         <h1 className="text-lg md:text-xl tracking-tight text-foreground font-playfair text-5xl">
           Lumen Archive
         </h1>
@@ -19,7 +19,7 @@ export default function Header() {
             Materials
           </a>
           <a
-            href=""
+            href="#footer"
             className="font-body text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-300 text-[#737373]"
           >
             About

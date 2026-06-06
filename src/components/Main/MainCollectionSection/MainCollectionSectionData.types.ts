@@ -10,3 +10,7 @@ export interface ProductColors {
     label: string;
     className: string
 }
+export interface ProductParameters {
+  label: string;
+  value: string;
+}

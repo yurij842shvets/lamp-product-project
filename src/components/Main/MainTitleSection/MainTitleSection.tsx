@@ -3,7 +3,7 @@ import lamp from "../../../assets/lamp-image.png";
 export default function MainTitleSection() {
   return (
     <>
-      <section className="flex justify-evenly items-center m-10">
+      <section className="flex justify-evenly items-center m-10" id="shipping" >
         <div>
           <p className="text-xs tracking-[0.2em] uppercase text-gray-500">
             Introducing
@@ -22,7 +22,6 @@ export default function MainTitleSection() {
           <button className="!bg-black text-white text-sm tracking-widest uppercase px-10 py-4 hover:bg-gray-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-4">
             PURCHASE - $890
           </button>
-          <div></div>
 
           <div className="flex gap-12 pt-2">
             <div>

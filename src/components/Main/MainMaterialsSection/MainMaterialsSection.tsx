@@ -6,7 +6,7 @@ export default function MainMaterialsSection() {
 
   return (
     <section id="materials" >
-      <div className="flex justify-around mt-32 items-end mb-6">
+      <div className="flex justify-between px-35 mt-32 pb-20 items-end mb-10 border-b border-[#E5E5E5]">
         <div>
           <p className="font-body text-[11px] tracking-[0.2em] uppercase text-muted-foreground mb-3">
             Materiality
@@ -22,7 +22,7 @@ export default function MainMaterialsSection() {
         </p>
       </div>
 
-      <div className="flex gap-4 overflow-hidden cursor-grab active:cursor-grabbing select-none mt-10>">
+      <div className="flex gap-4 overflow-hidden cursor-grab active:cursor-grabbing select-none mt-10 pb-30 border-b border-[#E5E5E5]">
         <div
           className="
            flex gap-4 overflow-x-auto scroll-smooth"
