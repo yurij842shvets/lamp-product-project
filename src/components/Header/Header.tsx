@@ -1,4 +1,9 @@
+import { useDispatch} from "react-redux";
+import { openCart } from "../../store/cartSlice";
+
 export default function Header() {
+  const dispatch = useDispatch()
+
   return (
     <>
       <section className="flex items-center justify-around" id="returns">
@@ -26,7 +31,7 @@ export default function Header() {
           </a>
         </nav>
 
-        <button className="text-[#737373]">Cart (0)</button>
+        <button className="text-[#737373]" onClick={() => dispatch(openCart())}>Cart (0)</button>
       </section>
     </>
   );

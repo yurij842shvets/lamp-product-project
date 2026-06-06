@@ -4,6 +4,9 @@ import {
   productsColorsData,
   productsParametersData,
 } from "./MainCollectionSectionData";
+import { useDispatch} from "react-redux";
+import { addToCart } from "../../../store/cartSlice";
+import productImage from '../../../assets/lamp-image.png'
 
 export default function MainCollectionSection() {
   const [activeVariant, setActiveVariant] = useState<string>("day");
@@ -14,6 +17,8 @@ export default function MainCollectionSection() {
   const currentVariant = productsVariantsData.find(
     (variant) => variant.id === activeVariant,
   );
+
+  const dispatch = useDispatch()
 
   return (
     <section id="collection" className="mt-40">
@@ -85,7 +90,13 @@ export default function MainCollectionSection() {
               </div>
             </div>
 
-            <button className="mt-4 w-[400px] !bg-black text-white text-sm tracking-widest uppercase px-10 py-4 hover:bg-gray-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-4">
+            <button onClick={() => dispatch(addToCart({
+              productId: 'aura',
+              title: 'Aura —1',
+              price: 899,
+              image: productImage,
+              colorId: selectedColor
+            }))} className="mt-4 w-[400px] !bg-black text-white text-sm tracking-widest uppercase px-10 py-4 hover:bg-gray-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-4">
               ADD TO CART - $890
             </button>
 
