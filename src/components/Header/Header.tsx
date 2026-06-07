@@ -1,8 +1,13 @@
-import { useDispatch} from "react-redux";
+import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 import { openCart } from "../../store/cartSlice";
+import type { RootState } from "../../store/store";
 
 export default function Header() {
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
+
+  const items = useAppSelector((state: RootState) => state.cart.items )
+
+  const itemsQuantity = items.reduce((sum, item) => sum + item.quantity, 0)
 
   return (
     <>
@@ -31,7 +36,7 @@ export default function Header() {
           </a>
         </nav>
 
-        <button className="text-[#737373]" onClick={() => dispatch(openCart())}>Cart (0)</button>
+        <button className="text-[#737373]" onClick={() => dispatch(openCart())}>Cart ({itemsQuantity})</button>
       </section>
     </>
   );

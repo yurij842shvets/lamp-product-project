@@ -4,8 +4,8 @@ import {
   productsColorsData,
   productsParametersData,
 } from "./MainCollectionSectionData";
-import { useDispatch} from "react-redux";
-import { addToCart } from "../../../store/cartSlice";
+import { useAppDispatch } from "../../../hooks/hooks";
+import { addToCart,openCart } from "../../../store/cartSlice";
 import productImage from '../../../assets/lamp-image.png'
 
 export default function MainCollectionSection() {
@@ -18,7 +18,7 @@ export default function MainCollectionSection() {
     (variant) => variant.id === activeVariant,
   );
 
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   return (
     <section id="collection" className="mt-40">
@@ -69,7 +69,7 @@ export default function MainCollectionSection() {
               <p className={labelClass}>Finish</p>
               <div className="flex gap-4">
                 {productsColorsData.map((color) => (
-                  <div>
+                  <div key={color.id}>
                     <button
                       key={color.id}
                       onClick={() => setSelectedColor(color.id)}
@@ -90,13 +90,19 @@ export default function MainCollectionSection() {
               </div>
             </div>
 
-            <button onClick={() => dispatch(addToCart({
+            <button onClick={() => {dispatch(addToCart({
               productId: 'aura',
               title: 'Aura —1',
               price: 899,
               image: productImage,
-              colorId: selectedColor
-            }))} className="mt-4 w-[400px] !bg-black text-white text-sm tracking-widest uppercase px-10 py-4 hover:bg-gray-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-4">
+              colorId: selectedColor,
+
+            }))
+          
+          
+            dispatch(openCart())
+          }}
+            className="mt-4 w-[400px] !bg-black text-white text-sm tracking-widest uppercase px-10 py-4 hover:bg-gray-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-4">
               ADD TO CART - $890
             </button>
 

@@ -19,7 +19,9 @@ export default function MainTitleSection() {
             as an art form.
           </p>
 
-          <button className="!bg-black text-white text-sm tracking-widest uppercase px-10 py-4 hover:bg-gray-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-4">
+          <button
+         onClick={() => {document.getElementById('collection')?.scrollIntoView({behavior: 'smooth'})}}
+          className="!bg-black text-white text-sm tracking-widest uppercase px-10 py-4 hover:bg-gray-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-4">
             PURCHASE - $890
           </button>
 
