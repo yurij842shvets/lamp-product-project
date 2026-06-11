@@ -25,7 +25,7 @@ export function useDragScroll() {
     e.preventDefault(); 
 
     const x = e.clientX;
-    const walk = (x - startX.current) * 100;
+    const walk = (x - startX.current) * 40;
 
     ref.current.scrollLeft = scrollLeft.current - walk;
   }

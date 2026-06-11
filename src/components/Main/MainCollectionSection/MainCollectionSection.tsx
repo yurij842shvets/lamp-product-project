@@ -5,8 +5,8 @@ import {
   productsParametersData,
 } from "./MainCollectionSectionData";
 import { useAppDispatch } from "../../../hooks/hooks";
-import { addToCart,openCart } from "../../../store/cartSlice";
-import productImage from '../../../assets/lamp-image.png'
+import { addToCart, openCart } from "../../../store/cartSlice";
+import productImage from "../../../assets/lamp-image.png";
 
 export default function MainCollectionSection() {
   const [activeVariant, setActiveVariant] = useState<string>("day");
@@ -18,12 +18,12 @@ export default function MainCollectionSection() {
     (variant) => variant.id === activeVariant,
   );
 
-  const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch();
 
   return (
     <section id="collection" className="mt-40">
       <div>
-        <div className="px-40 py-10 border-b border-[#E5E5E5] mb-15">
+        <div className="px-5 min-[450px]:px-40 py-10 border-b border-[#E5E5E5] mb-15">
           <p className="text-xs tracking-[0.2em] uppercase text-gray-500">
             The Photometric Grid
           </p>
@@ -33,16 +33,16 @@ export default function MainCollectionSection() {
           </h2>
         </div>
 
-        <div className="flex items-start justify-evenly">
+        <div className="flex flex-col items-start justify-evenly min-[1070px]:flex-row">
           <div className="flex flex-col gap-y-16">
             <div>
               <img
-                className="w-[600px] h-[450px]"
+                className="w-[600px] h-[450px] px-4 w-full h-auto"
                 src={currentVariant?.image}
                 alt={currentVariant?.label}
               />
 
-              <div className="flex items-center justify-center gap-40">
+              <div className="gap-20 flex items-center justify-center min-[516px]:gap-40">
                 {productsVariantsData.map((variant) => (
                   <button
                     key={variant.id}
@@ -56,7 +56,7 @@ export default function MainCollectionSection() {
             </div>
           </div>
 
-          <div>
+          <div className="ml-2 mt-6">
             <div>
               <h2 className="text-3xl tracking-tight text-foreground font-playfair">
                 Aura —1
@@ -90,19 +90,22 @@ export default function MainCollectionSection() {
               </div>
             </div>
 
-            <button onClick={() => {dispatch(addToCart({
-              productId: 'aura',
-              title: 'Aura —1',
-              price: 899,
-              image: productImage,
-              colorId: selectedColor,
+            <button
+              onClick={() => {
+                dispatch(
+                  addToCart({
+                    productId: "aura",
+                    title: "Aura —1",
+                    price: 899,
+                    image: productImage,
+                    colorId: selectedColor,
+                  }),
+                );
 
-            }))
-          
-          
-            dispatch(openCart())
-          }}
-            className="mt-4 w-[400px] !bg-black text-white text-sm tracking-widest uppercase px-10 py-4 hover:bg-gray-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-4">
+                dispatch(openCart());
+              }}
+              className="w-[250px] mt-4 min-[422px]:w-[400px] !bg-black text-white text-sm tracking-widest uppercase px-10 py-4 hover:bg-gray-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-4"
+            >
               ADD TO CART - $890
             </button>
 

@@ -13,7 +13,7 @@ export const footerData: FooterData[] = [
       { label: "Collection", url: "#collection" },
       { label: "Materials", url: "#materials" },
       { label: "Shipping", url: "#shipping" },
-      { label: "Returns", url: "#returns" }
+      { label: "Returns", url: "#" }
     ]
   },
   {

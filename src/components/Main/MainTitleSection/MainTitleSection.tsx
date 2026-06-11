@@ -3,7 +3,18 @@ import lamp from "../../../assets/lamp-image.png";
 export default function MainTitleSection() {
   return (
     <>
-      <section className="flex justify-evenly items-center m-10" id="shipping" >
+      <section
+        className="
+    flex
+    flex-col-reverse
+    lg:flex-row
+    justify-evenly
+    items-center
+    gap-10
+    m-10
+  "
+        id="shipping"
+      >
         <div>
           <p className="text-xs tracking-[0.2em] uppercase text-gray-500">
             Introducing
@@ -20,8 +31,13 @@ export default function MainTitleSection() {
           </p>
 
           <button
-         onClick={() => {document.getElementById('collection')?.scrollIntoView({behavior: 'smooth'})}}
-          className="!bg-black text-white text-sm tracking-widest uppercase px-10 py-4 hover:bg-gray-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-4">
+            onClick={() => {
+              document
+                .getElementById("collection")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="!bg-black text-white text-sm tracking-widest uppercase px-10 py-4 hover:bg-gray-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-4"
+          >
             PURCHASE - $890
           </button>
 
@@ -47,7 +63,15 @@ export default function MainTitleSection() {
           </div>
         </div>
 
-        <img src={lamp} alt="lamp" />
+        <img
+          src={lamp}
+          alt="lamp"
+          className="
+    w-full
+    max-w-[600px]
+    h-auto
+  "
+        />
       </section>
     </>
   );

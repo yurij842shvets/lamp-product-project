@@ -2,11 +2,12 @@ import { materialsData } from "./MainMaterialsSectionData";
 import { useDragScroll } from "../../../hooks/useDragScroll";
 
 export default function MainMaterialsSection() {
-  const { ref, onPointerDown, onPointerMove, onPointerUp, onPointerCancel} = useDragScroll();
+  const { ref, onPointerDown, onPointerMove, onPointerUp, onPointerCancel } =
+    useDragScroll();
 
   return (
-    <section id="materials" >
-      <div className="flex justify-between px-35 mt-32 pb-20 items-end mb-10 border-b border-[#E5E5E5]">
+    <section id="materials">
+      <div className="flex justify-between px-5 min-[450px]:px-35 mt-32 pb-20 items-end mb-10 border-b border-[#E5E5E5]">
         <div>
           <p className="font-body text-[11px] tracking-[0.2em] uppercase text-muted-foreground mb-3">
             Materiality
@@ -33,15 +34,17 @@ export default function MainMaterialsSection() {
           onPointerCancel={onPointerCancel}
         >
           {materialsData.map((card) => (
-            <div className="min-w-[500px] m-4" key={card.title}>
-              <img
-                src={card.image}
-                alt={card.title}
-                className="w-full aspect-[16/9] object-cover"
-              />
-              <h3>{card.title}</h3>
-              <p>{card.spec}</p>
-              <p>{card.detail}</p>
+            <div className="w-[85vw] max-w-[500px] shrink-0 m-4">
+              <div key={card.title}>
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className="w-full h-auto"
+                />
+                <h3>{card.title}</h3>
+                <p>{card.spec}</p>
+                <p>{card.detail}</p>
+              </div>
             </div>
           ))}
         </div>

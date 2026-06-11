@@ -3,8 +3,8 @@ import { footerData } from "./FooterData";
 export default function Footer() {
   return (
     <>
-      <section id="footer" className="mt-40 border-t border-[#E5E5E5] pt-10">
-        <div className="flex items-start justify-evenly">
+      <section id="footer" className="mt-40 border-t border-[#E5E5E5] pt-10 ml-2">
+        <div className="flex items-start justify-evenly flex-col min-[491px]:flex-row">
           {footerData.map((section, index) => (
             <div key={index}>
               <h3
@@ -39,10 +39,10 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="flex items-center justify-between px-40 py-20 mt-10 text-[#737373] border-t border-[#E5E5E5]">
+       <div className="flex-col px-10 min-[491px]:flex items-center justify-between min-[491px]:px-40 py-20 mt-10 text-[#737373] border-t border-[#E5E5E5]">
           <p>© 2026 Lumen Archive. All rights reserved.</p>
 
-          <div className="flex gap-5">
+          <div className="justify-center flex gap-5 min-[491px]:justify-start">
             <p>Privacy</p>
             <p>Terms</p>
             <p>Cookies</p>

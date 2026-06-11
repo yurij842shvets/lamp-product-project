@@ -22,7 +22,7 @@ export default function Cart() {
         onClick={() => dispatch(closeCart())}
       />
 
-      <div className="fixed top-0 right-0 z-50 h-screen w-[38rem] bg-white border-l flex flex-col">
+      <div className="fixed top-0 right-0 z-50 h-screen w-full md:w-[38rem] bg-white border-l flex flex-col">
         <header className="flex items-center justify-between px-8 py-6 border-b">
           <h2 className="text-sm tracking-wide">Your Cart</h2>
           <button
@@ -33,7 +33,7 @@ export default function Cart() {
           </button>
         </header>
 
-        <main className="flex-1 overflow-y-auto overscroll-contain">
+        <main className="flex-1 min-h-0 overflow-y-auto overscroll-contain">
           {cart.length === 0 ? (
             <h2>Your cart is empty</h2>
           ) : (
@@ -49,7 +49,7 @@ export default function Cart() {
                     className="w-16 h-16 object-cover bg-gray-200"
                   />
 
-                  <div className="flex-1">
+                  <div className="flex-1 min-w-0">
                     <h3 className="text-sm">{i.title}</h3>
                     <p className="text-xs text-gray-500 mt-1">{i.colorId}</p>
                     <div className="flex items-center gap-3 mt-3">
