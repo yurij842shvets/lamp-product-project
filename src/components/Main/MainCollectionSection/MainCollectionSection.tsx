@@ -36,11 +36,14 @@ export default function MainCollectionSection() {
         <div className="flex flex-col items-start justify-evenly min-[1070px]:flex-row">
           <div className="flex flex-col gap-y-16">
             <div>
-              <img
-                className="w-[600px] h-[450px] px-4 w-full h-auto"
-                src={currentVariant?.image}
-                alt={currentVariant?.label}
-              />
+              <div className="relative w-full h-[450px] overflow-hidden">
+                <img
+                  key={activeVariant}
+                  src={currentVariant?.image}
+                  alt={currentVariant?.label}
+                  className="w-full h-full object-cover animate__animated animate__fadeIn"
+                />
+              </div>
 
               <div className="gap-20 flex items-center justify-center min-[516px]:gap-40">
                 {productsVariantsData.map((variant) => (
