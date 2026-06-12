@@ -60,7 +60,7 @@ export const cartSlice = createSlice({
 
       item.quantity -= 1;
 
-      if (item.quantity < 0) {
+      if (item.quantity <= 0) {
         state.items = state.items.filter(
           (i) =>
             !(

@@ -36,12 +36,12 @@ export default function MainCollectionSection() {
         <div className="flex flex-col items-start justify-evenly min-[1070px]:flex-row">
           <div className="flex flex-col gap-y-16">
             <div>
-              <div className="relative w-full h-[450px] overflow-hidden">
+              <div className="relative w-full h-[400px] overflow-hidden">
                 <img
                   key={activeVariant}
                   src={currentVariant?.image}
                   alt={currentVariant?.label}
-                  className="w-full h-full object-cover animate__animated animate__fadeIn"
+                  className="px-2 w-full h-full object-cover animate__animated animate__fadeIn"
                 />
               </div>
 

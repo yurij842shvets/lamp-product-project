@@ -48,7 +48,7 @@ export default function MainTitleSection() {
               </p>
               <p className="font-body text-sm text-foreground mt-1">48 cm</p>
             </div>
-            <div>
+            <div className="whitespace-nowrap">
               <p className="font-body text-[11px] tracking-[0.1em] uppercase text-muted-foreground">
                 Lumens
               </p>
