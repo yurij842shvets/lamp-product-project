@@ -13,16 +13,31 @@ export default function Cart() {
   const cart = useSelector((state: RootState) => state.cart.items);
 
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-  if (!isOpen) return null;
 
   return (
     <section>
       <div
-        className="fixed inset-0 z-40 bg-black/10 backdrop-blur-md"
+        className={`
+    fixed inset-0 z-40 bg-black/10 backdrop-blur-md
+    transition-opacity duration-300
+    ${
+      isOpen
+        ? "opacity-100 pointer-events-auto"
+        : "opacity-0 pointer-events-none"
+    }
+  `}
         onClick={() => dispatch(closeCart())}
       />
 
-      <div className="fixed top-0 right-0 z-50 h-screen w-full md:w-[38rem] bg-white border-l flex flex-col">
+      <div
+        className={`
+    fixed top-0 right-0 z-50 h-screen
+    w-full md:w-[38rem]
+    bg-white border-l flex flex-col
+    transition-transform duration-300 ease-out
+    ${isOpen ? "translate-x-0" : "translate-x-full"}
+  `}
+      >
         <header className="flex items-center justify-between px-8 py-6 border-b">
           <h2 className="text-sm tracking-wide">Your Cart</h2>
           <button

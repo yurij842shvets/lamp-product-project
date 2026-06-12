@@ -63,15 +63,7 @@ export default function MainTitleSection() {
           </div>
         </div>
 
-        <img
-          src={lamp}
-          alt="lamp"
-          className="
-    w-full
-    max-w-[600px]
-    h-auto
-  "
-        />
+        <img src={lamp} alt="lamp" className=" w-full max-w-[600px] h-auto" />
       </section>
     </>
   );
